@@ -1,8 +1,8 @@
 # SOURCE https://github.com/Team-ProjectCodeX
 # CREATED BY https://t.me/O_okarma
 # PROVIDED BY https://t.me/ProjectCodeX
-# ➥ @MIKO_V2BOT ʏᴏᴜʀ ᴍᴇssᴀɢᴇ @ᴜsᴇʀɴᴀᴍᴇ
-# ➥ @MIKO_V2BOT @ᴜsᴇʀɴᴀᴍᴇ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ
+# ➥ @𝖸𝖺𝗆𝖺𝗍𝗈𝖲𝖺𝗇𝖡𝗈𝗍 ʏᴏᴜʀ ᴍᴇssᴀɢᴇ @ᴜsᴇʀɴᴀᴍᴇ
+# ➥ @𝖸𝖺𝗆𝖺𝗍𝗈𝖲𝖺𝗇𝖡𝗈𝗍 @ᴜsᴇʀɴᴀᴍᴇ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ
 
 # TURN ON INLINE MODE FOR USE.
 
@@ -83,16 +83,16 @@ async def mainwhisper(update: Update, context: ContextTypes.DEFAULT_TYPE):
     answers = [
         InlineQueryResultArticle(
             id=whisperId,
-            title=f"👤 Send a whisper message to {user}!",
+            title=f"Send a whisper message to {user}!",
             description="Only they can see it!",
             input_message_content=InputTextMessageContent(
-                f"🔐 A Whisper Message For {user}\nOnly they can see it!"
+                f"🔐 A Whisper Message For {user}\𝗇Only they can see it!"
             ),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            "📩 𝗦𝗵𝗼𝘄 𝗪𝗵𝗶𝘀𝗽𝗲𝗿 📩",
+                            "𝖲𝗁𝗈𝗐 𝖶𝗁𝗂𝗌𝗉𝖾𝗋 𝖬𝖾𝗌𝗌𝖺𝗀𝖾",
                             callback_data=f"whisper_{whisperId}",
                         )
                     ]
@@ -100,7 +100,7 @@ async def mainwhisper(update: Update, context: ContextTypes.DEFAULT_TYPE):
             ),
         )
     ]
-
+    
     await context.bot.answer_inline_query(query.id, answers)
 
 
@@ -138,7 +138,7 @@ async def showWhisper(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
     else:
         await context.bot.answer_callback_query(
-            callback_query.id, "Not your Whisper!", show_alert=True
+            callback_query.id, "𝖲𝗈𝗋𝗋𝗒, 𝗒𝗈𝗎 𝖼𝖺𝗇'𝗍 𝗌𝖾𝖾 𝗍𝗁𝗂𝗌 𝗐𝗁𝗂𝗌𝗉𝖾𝗋 𝖻𝖾𝖼𝖺𝗎𝗌𝖾 𝗂𝗍 𝗐𝖺𝗌 𝗇𝗈𝗍 𝗌𝖾𝗇𝗍 𝗍𝗈 𝗒𝗈𝗎🔒.", show_alert=True
         )
 
 
@@ -170,13 +170,13 @@ function(CallbackQueryHandler(showWhisper, pattern="^whisper_", block=False))
 
 # <==================================================== HELP ===================================================>
 __help__ = """
-➠ *Whisper inline function for secret chats.*
+╭• *𝖶𝗁𝗂𝗌𝗉𝖾𝗋 inline function for secret chats*
 
-➠ *Commands:*
+╭• *Commands:*
 
-» @MIKO_V2BOT your message @username
-» @MIKO_V2BOT @username your message
+» @YamatoSanBot 𝗒𝗈𝗎𝗋 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 @username
+» @YamatoSanBot @username 𝗒𝗈𝗎𝗋 𝗆𝖾𝗌𝗌𝖺𝗀𝖾
 """
 
-__mod_name__ = "WHISPER-MSG"
+__mod_name__ = "𝖶𝗁𝗂𝗌𝗉𝖾𝗋 𝖳𝖾𝗑𝗍"
 # <==================================================== END ===================================================>
